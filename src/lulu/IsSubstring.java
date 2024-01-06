@@ -1,0 +1,31 @@
+package lulu;
+import java.util.*;
+
+public class IsSubstring {
+public static void main(String[] args) {
+	
+	String mainStr ="this my is my is my ";
+
+	occurrencesString (mainStr,"my");
+	
+	}
+
+private static void occurrencesString(String mainStr,String subStr) {
+	
+	List<String> perms = new ArrayList<>();
+	
+	for(int i=0;i<=mainStr.length();i++) {
+		
+		if((i+2)<mainStr.length()) {
+			perms.add(mainStr.substring(i, i+2));
+		}
+		}
+	int count =0;
+	for(String perm:perms) {
+		if(subStr.equals(perm)) {
+			count++;
+		}	
+	}
+	System.out.println(count);
+}
+}
