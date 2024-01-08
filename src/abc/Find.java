@@ -12,7 +12,6 @@ public class Find {
 		for(int i=0;i<str.length();i++) {
 			
 			if(map.containsKey(str.charAt(i))==false){
-				  bb 
 				map.put(str.charAt(i),1);
 				
 			}  
